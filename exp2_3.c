@@ -1,4 +1,4 @@
-//afl-fuzz -s 0 -i inputs -o outputs -- ./exp3_3 
+//afl-fuzz -s 0 -i inputs -o outputs -- ./exp2_3 
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
       ssize_t len = __AFL_FUZZ_TESTCASE_LEN;
 
       char filename[256];
-      sprintf(filename, "exp3cfg.%d", getpid()); //temporary file (on HDD)
+      sprintf(filename, "exp3cfg.%d", getpid());
 
       FILE *fp = fopen(filename, "wb");
       if (!fp) {

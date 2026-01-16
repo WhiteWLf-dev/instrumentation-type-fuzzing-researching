@@ -33,8 +33,7 @@ int main(int argc, char **argv) {
       ssize_t len = __AFL_FUZZ_TESTCASE_LEN;
 
       char filename[256];
-      sprintf(filename, "exp3cfg.%d", getpid()); //temporary file (on HDD)
-
+      sprintf(filename, "exp3cfg.%d", getpid()); 
       FILE *fp = fopen(filename, "wb");
       if (!fp) {
         continue; 
